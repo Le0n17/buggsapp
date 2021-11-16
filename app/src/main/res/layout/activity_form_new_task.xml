@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormNewTaskActivity">
+
+    <EditText
+        android:id="@+id/edtTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/edtDesc"
+        />
+
+    <EditText
+        android:id="@+id/edtDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTitle"
+        app:layout_constraintBottom_toTopOf="@+id/edtDate"
+        />
+
+    <EditText
+        android:id="@+id/edtDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/date"
+        android:layout_margin="10dp"
+        android:focusable="false"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtDesc"
+        app:layout_constraintEnd_toStartOf="@+id/edtTime"
+        app:layout_constraintBottom_toTopOf="@+id/btn"
+        />
+
+    <EditText
+        android:id="@+id/edtTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/time"
+        android:focusable="false"
+        app:layout_constraintStart_toEndOf="@+id/edtDate"
+        app:layout_constraintTop_toBottomOf="@+id/edtDesc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn"
+        />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/task"
+        app:layout_constraintEnd_toEndOf="@+id/edtTime"
+        app:layout_constraintStart_toStartOf="@+id/edtDate"
+        app:layout_constraintTop_toBottomOf="@+id/edtDate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
